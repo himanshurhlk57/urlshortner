@@ -14,9 +14,8 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   const id = shortId.generate();
-  const url = `http://localhost:5000/api/urls/${id}`;
   shortUrls[id] = req.body.longUrl;
-  res.send({ shortId: url });
+  res.status(201).send({ shortId: id });
 });
 
 module.exports = router;
