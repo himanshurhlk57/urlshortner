@@ -1,25 +1,16 @@
 const express = require("express");
 const router = express.Router();
 const shortId = require("short-id");
-
-const shortUrls = {};
+const shortUrl = require("../shortUrl");
 
 router.get("/", (req, res) => {
-  res.send(shortUrls);
-});
-
-router.get("/:id", (req, res) => {
-  res.redirect(shortUrls[req.params.id]);
+  res.json({ shortUrl: shortUrl });
 });
 
 router.post("/", (req, res) => {
-  const fullUrl =
-    req.protocol + "://" + req.get("host") + req.originalUrl + "/";
   const id = shortId.generate();
-  shortUrls[id] = req.body.longUrl;
-  const shortUrl = fullUrl + id;
-  console.log(shortUrl);
-  res.status(201).send({ shortId: shortUrl });
+  shortUrl[id] = req.body.longUrl;
+  res.status(201).send({ shortId: id });
 });
 
 module.exports = router;

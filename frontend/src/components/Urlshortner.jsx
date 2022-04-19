@@ -4,13 +4,14 @@ import copy from "copy-to-clipboard";
 import "./urlshortner.css";
 
 function Urlshortner() {
+  const hostUrl = window.location.href;
+
   const [longUrl, setLongUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
-
   const [copied, setCopied] = useState(true);
 
   const copyUrl = () => {
-    copy(shortUrl.shortId);
+    copy(hostUrl + shortUrl.shortId);
     setCopied(false);
     setTimeout(() => {
       setCopied(true);
@@ -21,23 +22,24 @@ function Urlshortner() {
     e.preventDefault();
     if (longUrl.length === 0) {
       window.alert("Input field can't be empty");
-    }
-    try {
-      const response = await fetch("/api/urls", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          longUrl: longUrl,
-        }),
-      });
-      const data = await response.json();
-      console.log(data);
-      setShortUrl(data);
-      setLongUrl("");
-    } catch (err) {
-      console.log(err);
+    } else {
+      try {
+        const response = await fetch("/api/urls", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            longUrl: longUrl,
+          }),
+        });
+        const data = await response.json();
+        console.log(data);
+        setShortUrl(data);
+        setLongUrl("");
+      } catch (err) {
+        console.log(err);
+      }
     }
   };
 
@@ -75,7 +77,9 @@ function Urlshortner() {
               <Card.Header>Shorten Link</Card.Header>
               <Card.Body>
                 <Card.Text>
-                  <h5 className="shorturl">{shortUrl.shortId}</h5>
+                  <h5 className="shorturl">
+                    {`${hostUrl}${shortUrl.shortId}`}
+                  </h5>
                 </Card.Text>
 
                 {copied ? (
