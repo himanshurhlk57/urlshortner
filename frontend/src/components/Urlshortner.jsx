@@ -17,8 +17,6 @@ function Urlshortner() {
     }, 3000);
   };
 
-  const currentUrl = window.location.href;
-
   const submitHandler = async (e) => {
     e.preventDefault();
     if (longUrl.length === 0) {
@@ -45,8 +43,8 @@ function Urlshortner() {
 
   return (
     <>
+      <h1 className="heading">URL SHORTNER</h1>
       <div className="wrapper">
-        <h1 className="heading">URL SHORTNER</h1>
         <div className="form">
           <form onSubmit={submitHandler}>
             <input
@@ -57,12 +55,12 @@ function Urlshortner() {
                 setLongUrl(e.target.value);
               }}
             />
-            <Button variant="secondary" type="submit" className="shorten">
+            <Button variant="secondary" type="submit" className="button">
               Shorten
             </Button>
             <Button
               variant="outline-danger"
-              className="reset"
+              className="button"
               onClick={(e) => {
                 setLongUrl("");
               }}
@@ -71,25 +69,26 @@ function Urlshortner() {
             </Button>
           </form>
         </div>
+        <div className="result">
+          {shortUrl ? (
+            <Card className="card">
+              <Card.Header>Shorten Link</Card.Header>
+              <Card.Body>
+                <Card.Text>
+                  <h5 className="shorturl">{shortUrl.shortId}</h5>
+                </Card.Text>
 
-        {shortUrl ? (
-          <Card className="card">
-            <Card.Header>Shorten Link</Card.Header>
-            <Card.Body>
-              <Card.Text>
-                <h5 className="shorturl">{shortUrl.shortId}</h5>
-              </Card.Text>
-
-              {copied ? (
-                <Button variant="info" onClick={copyUrl}>
-                  Copy Link
-                </Button>
-              ) : (
-                <Button variant="success">Copied</Button>
-              )}
-            </Card.Body>
-          </Card>
-        ) : null}
+                {copied ? (
+                  <Button variant="info" onClick={copyUrl}>
+                    Copy Link
+                  </Button>
+                ) : (
+                  <Button variant="success">Copied</Button>
+                )}
+              </Card.Body>
+            </Card>
+          ) : null}
+        </div>
       </div>
     </>
   );

@@ -2,35 +2,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
+    padding: 10px;
     box-shadow: 1px 2px 2px rgb(0 0 0 / 10%), -1px -1px 2px rgb(0 0 0 / 8%)
 }
 .heading{
+    text-align: center;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 24px;
     font-weight: 500;
 }
-.shorten{
+.button{
     margin: 0 15px;
 }
 
 input{
-  width: 40vw;
-  outline: none;
-  border: 1px solid #d5dbd9;
-  font-size: 15px;
-  padding: 8px 10px;
-  border-radius: 3px;
-  transition: all 0.3s ease;
+    width: 50vw;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 input:focus{
     border: 1.7px solid #188de0;
 }
-
-.form{
-    margin-bottom: 20px;
+.result{
+    margin-top: 10px;
+    width: 50vw;
 }
-.card{
-    margin-bottom: 20px;
+@media (max-width: 400px){
+    input{
+        width: 95vw;
+    }
+    .result{
+        width: 95vw;
+    }
+    .button{
+        margin-top: 15px;
+    }
+
+
 }

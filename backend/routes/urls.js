@@ -18,6 +18,7 @@ router.post("/", (req, res) => {
   const id = shortId.generate();
   shortUrls[id] = req.body.longUrl;
   const shortUrl = fullUrl + id;
+  console.log(shortUrl);
   res.status(201).send({ shortId: shortUrl });
 });
 
