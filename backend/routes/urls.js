@@ -13,9 +13,12 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+  const fullUrl =
+    req.protocol + "://" + req.get("host") + req.originalUrl + "/";
   const id = shortId.generate();
   shortUrls[id] = req.body.longUrl;
-  res.status(201).send({ shortId: id });
+  const shortUrl = fullUrl + id;
+  res.status(201).send({ shortId: shortUrl });
 });
 
 module.exports = router;

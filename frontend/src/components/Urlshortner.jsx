@@ -12,10 +12,18 @@ function Urlshortner() {
   const copyUrl = () => {
     copy(shortUrl.shortId);
     setCopied(false);
+    setTimeout(() => {
+      setCopied(true);
+    }, 3000);
   };
+
+  const currentUrl = window.location.href;
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    if (longUrl.length === 0) {
+      window.alert("Input field can't be empty");
+    }
     try {
       const response = await fetch("/api/urls", {
         method: "POST",
@@ -77,9 +85,7 @@ function Urlshortner() {
                   Copy Link
                 </Button>
               ) : (
-                <Button variant="success" onClick={copyUrl}>
-                  Copied
-                </Button>
+                <Button variant="success">Copied</Button>
               )}
             </Card.Body>
           </Card>
