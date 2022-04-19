@@ -55,12 +55,12 @@ function Urlshortner() {
                 setLongUrl(e.target.value);
               }}
             />
-            <Button variant="secondary" type="submit" className="button">
+            <Button variant="secondary" type="submit" className="shorten">
               Shorten
             </Button>
             <Button
               variant="outline-danger"
-              className="button"
+              className="reset"
               onClick={(e) => {
                 setLongUrl("");
               }}

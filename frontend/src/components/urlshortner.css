@@ -7,18 +7,21 @@
     box-shadow: 1px 2px 2px rgb(0 0 0 / 10%), -1px -1px 2px rgb(0 0 0 / 8%)
 }
 .heading{
+    color: #005555;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 15px;
     font-size: 24px;
     font-weight: 500;
 }
-.button{
-    margin: 0 15px;
+
+.shorten{
+    margin-left: 15px;
+    margin-right: 10px;
 }
 
 input{
-    width: 50vw;
+    width: 45vw;
     outline: none;
     border: 1px solid #d5dbd9;
     font-size: 15px;
@@ -33,6 +36,9 @@ input:focus{
     margin-top: 10px;
     width: 50vw;
 }
+.shorturl{
+    color: #005555;
+}
 @media (max-width: 400px){
     input{
         width: 95vw;
@@ -40,8 +46,11 @@ input:focus{
     .result{
         width: 95vw;
     }
-    .button{
+    .shorten, .reset{
         margin-top: 15px;
+    }
+    .shorten{
+        margin-left: 0;
     }
 
 
