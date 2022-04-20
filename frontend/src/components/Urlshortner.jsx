@@ -45,7 +45,7 @@ function Urlshortner() {
 
   return (
     <>
-      <h1 className="heading">URL SHORTNER</h1>
+      <h1 className="heading"> URL SHORTNER</h1>
       <div className="wrapper">
         <div className="form">
           <form onSubmit={submitHandler}>
@@ -74,7 +74,7 @@ function Urlshortner() {
         <div className="result">
           {shortUrl ? (
             <Card className="card">
-              <Card.Header>Shorten Link</Card.Header>
+              <Card.Header className="cardHeading">Shorten Link</Card.Header>
               <Card.Body>
                 <Card.Text>
                   <h5 className="shorturl">
