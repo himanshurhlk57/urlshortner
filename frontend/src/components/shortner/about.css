@@ -1,0 +1,32 @@
+.aboutWrapper{
+  width: 1290px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  
+}
+.line{
+  width: 1.5px;
+  height: 252.94px;
+  background: #C4C4C4;
+  margin: 0 70px;
+}
+.aboutHeading{
+  margin-bottom: 14px;
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #272727;
+
+}
+.aboutPara{
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  color: #272727;
+}

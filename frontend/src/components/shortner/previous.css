@@ -1,0 +1,38 @@
+.previousWrapper{
+   padding: 18px;
+  width: 1290px;
+  margin: 0 auto;
+  height: 200px;
+  box-shadow: #C4C4C4 0px 1px 4px;
+  display: flex;
+  justify-content: space-around;
+}
+.previousHeading{
+  margin-top: 10px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 33px;
+  font-size: 24px;
+  color: #272727;
+}
+.copyBtn{
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 108px;
+  height: 38px;
+  background: #8e8bfd;
+}
+.previousUrls{
+ color:#272727;
+ font-weight: 400;
+ font-size: 18px;
+ line-height: 25px;
+
+}
+
+

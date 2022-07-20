@@ -1,0 +1,49 @@
+.headerWrapper {
+  background: #8e8bfd;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+}
+.logoWrapper {
+  display: flex;
+}
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.headerEnd {
+  display: flex;
+}
+
+.logo {
+  position: relative;
+  left: 25px;
+  top: 9px;
+  width: 29.98px;
+  height: 30px;
+}
+
+.logoText {
+  position: relative;
+  left: 35px;
+  top: 9px;
+  color: #ffffff;
+  width: 98px;
+  height: 30px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+}
+
+.about,
+.contact {
+  position: relative;
+  top: 10px;
+  right: 12px;
+  color: #ffffff;
+  font-style: normal;
+  width: 81px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 27px;
+}

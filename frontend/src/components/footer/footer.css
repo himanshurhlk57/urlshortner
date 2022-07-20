@@ -1,0 +1,20 @@
+.footerWrapper{
+  height: 50px;
+  background: #272727;
+  display: flex;
+  justify-content: space-around;
+  color: #FFFFFF;
+  align-items: center;
+}
+.socialMedia, img{
+  margin-left: 10px;
+}
+.footerLogo{
+  height: 25px;
+  margin-right: 10px;
+}
+.footerText{
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+}

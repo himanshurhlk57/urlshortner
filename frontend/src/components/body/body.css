@@ -1,0 +1,44 @@
+.bodyWrapper {
+  margin-top: 65px;
+  display: flex;
+  justify-content: center;
+}
+.subBody {
+  margin-right: 255px;
+}
+.headingg,
+.subHeading {
+  width: 669.11px;
+  height: 100.12px;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 98px;
+}
+.headingg {
+  color: #272727;
+}
+.subHeading {
+  color: #8e8bfd;
+}
+.para {
+  width: 668.23px;
+  height: 80.97px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: justify;
+  color: #272727;
+}
+.shortenButton {
+  color: #FFFFFF;
+  border: none;
+  background: #8e8bfd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 600;
+  width: 156px;
+  height: 52px;
+}
